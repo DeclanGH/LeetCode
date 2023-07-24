@@ -1,11 +1,11 @@
 public class Solution {
     // you need to treat n as an unsigned value
     public int hammingWeight(int n) {
-        int one = 0;
-        while(n != 0){
-            one += (n & 1);
-            n >>>= 1; // i just found out logical and arithmetic(>>) shift have different symbols
+        int ones = 0;
+        while(n != 0){ // Faster solution i learned from NeetCode
+            n &= (n-1);
+            ones += 1; 
         }
-        return one;
+        return ones;
     }
 }
