@@ -2,7 +2,7 @@ class Solution {
     public int[] topKFrequent(int[] nums, int k) {
         if (nums.length == k) return nums;
 
-        // updated version with priority queue
+        // updated version 
         int[] result = new int[k];
         HashMap<Integer,Integer> map = new HashMap<>();
         PriorityQueue<Integer> pq = new PriorityQueue<>(Comparator.comparingInt(map::get).reversed());
